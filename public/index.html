@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aapli Tapari</title>
+</head>
+<body>
+    <div class="menu-container">
+        <header>
+            <h1>Aapli Tapari</h1>
+            <p>"Your Perfect Adda"</p>
+        </header>
+
+        <section class="order-section">
+            <h2>Order Details</h2>
+            <input type="text" id="customer-name" placeholder="Your Name" required>
+            <input type="text" id="table-number" placeholder="Table Number" required>
+        </section>
+
+        <section class="menu-section">
+            <h2>Coffee</h2>
+            <ul id="menu-items">
+                <li class="menu-item">
+                    <span>Espresso</span> <span>80</span>
+                    <input type="number" class="quantity" data-name="Espresso" data-price="80" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Latte</span> <span>90</span>
+                    <input type="number" class="quantity" data-name="Latte" data-price="90" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Cold Coffee</span> <span>60</span>
+                    <input type="number" class="quantity" data-name="Cold Coffee" data-price="60" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Mocha</span> <span>70</span>
+                    <input type="number" class="quantity" data-name="Mocha" data-price="70" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Just Coffee</span> <span>50</span>
+                    <input type="number" class="quantity" data-name="Just Coffee" data-price="50" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Filter Coffee</span> <span>60</span>
+                    <input type="number" class="quantity" data-name="Filter coffee" data-price="60" min="0" value="0">
+                </li>
+            </ul>
+        </section>
+
+        <section class="menu-section">
+            <h2>Tea</h2>
+            <ul id="menu-items">
+                <li class="menu-item">
+                    <span>Lemon Tea</span> <span>30</span>
+                    <input type="number" class="quantity" data-name="Lemon Tea" data-price="30" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Iced Tea</span> <span>70</span>
+                    <input type="number" class="quantity" data-name="Iced Tea" data-price="70" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Green Tea</span> <span>30</span>
+                    <input type="number" class="quantity" data-name="Green Tea" data-price="30" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Black Tea</span> <span>20</span>
+                    <input type="number" class="quantity" data-name="Black Tea" data-price="20" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Ginger Tea</span> <span>20</span>
+                    <input type="number" class="quantity" data-name="Ginger Tea" data-price="20" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Cutting Chai</span> <span>15</span>
+                    <input type="number" class="quantity" data-name="Cutting Chai" data-price="15" min="0" value="0">
+                </li>
+            </ul>
+        </section>
+
+        <section class="menu-section">
+            <h2>Snacks</h2>
+            <ul id="menu-items">
+                <li class="menu-item">
+                    <span>Bombay Vada Pav</span> <span>15</span>
+                    <input type="number" class="quantity" data-name="Bombay Vada Pav" data-price="15" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Pizza</span> <span>90</span>
+                    <input type="number" class="quantity" data-name="Pizza" data-price="90" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Burger</span> <span>50</span>
+                    <input type="number" class="quantity" data-name="Burger" data-price="50" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>French Fries</span> <span>50</span>
+                    <input type="number" class="quantity" data-name="French Fries" data-price="50" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Sandwich</span> <span>40</span>
+                    <input type="number" class="quantity" data-name="Sandwich" data-price="40" min="0" value="0">
+                </li>
+                <li class="menu-item">
+                    <span>Manchurian</span> <span>60</span>
+                    <input type="number" class="quantity" data-name="Manchurian" data-price="60" min="0" value="0">
+                </li>
+            </ul>
+        </section>
+
+        <p id="total-bill">Total Bill: 0.00</p>
+
+        <button class="order-button" onclick="placeOrder()">Place Order</button>
+
+        <footer>
+            <p>Open daily from 8 AM to 6 PM  HAVE A GOOD DAY</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

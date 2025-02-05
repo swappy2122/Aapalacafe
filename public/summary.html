@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Summary</title>
+</head>
+<body>
+    <div class="summary-container">
+        <header>
+            <h1>Order Summary</h1>
+        </header>
+        
+        <h2>Customer Details</h2>
+        <p id="customer-name"></p>
+        <p id="table-number"></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="order-items"></tbody>
+        </table>
+        
+        <p id="total-bill"></p>
+        <button class="confirm-button" onclick="confirmOrder()">Confirm Order</button>
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="summary.js"></script>
+</body>
+</html>
