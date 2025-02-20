@@ -1,0 +1,235 @@
+/* style.css */
+
+/* Root variables for consistent styling */
+:root {
+    --dark-color: #232323;
+    --light-color: #F4F4F4;
+    --accent-color: #f4b400;
+    --input-color: hsl(226, 45%, 43%);
+    --font-size: 1rem;
+    --gap-size: 2em;
+    --font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Reset margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic body styling */
+  body {
+    font-family: var(--font-family);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  /* Navigation bar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-color);
+    padding: 10px;
+  }
+  
+  /* Logo styling */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Toggle container for Dine In / Take Away */
+  .toggle-container {
+    display: flex;
+    background-color: var(--input-color);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 1em;
+  }
+  
+  /* Individual toggle option styling */
+  .toggle-option {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    color: var(--light-color);
+    font-size: var(--font-size);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Active state for toggle option */
+  .toggle-option.active {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+  }
+  
+  /* Search bar container styling */
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--input-color);
+    border-radius: 20px;
+    padding: 0.5em 1em;
+  }
+  
+  /* Search input field styling */
+  .search-container input[type="text"] {
+    border: none;
+    background: none;
+    color: var(--light-color);
+    outline: none;
+    padding: 0.5em;
+    font-size: var(--font-size);
+  }
+  
+  /* Placeholder color in search input */
+  .search-container input[type="text"]::placeholder {
+    color: var(--light-color);
+  }
+  
+  /* Search icon color */
+  .search-container .fa-search {
+    color: var(--light-color);
+  }
+  
+  /* Hamburger menu styling */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    cursor: pointer;
+  }
+  
+  /* Hamburger menu lines */
+  .menu-toggle span {
+    width: 3%;
+    height: 4px;
+    background-color: var(--light-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Transform lines into X when active */
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Mobile menu styling */
+  .mobile-menu {
+    display: none;
+    background-color: var(--dark-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-size);
+  }
+  
+  /* Show mobile menu when active */
+  .mobile-menu.active {
+    display: flex;
+  }
+  
+  /* List styling in mobile menu */
+  .mobile-menu ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  /* Link styling in mobile menu */
+  .mobile-menu ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: var(--font-size);
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect on mobile menu links */
+  .mobile-menu ul li a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Card container styling */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  /* Individual card styling */
+  .card {
+    background-color: var(--light-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect on cards */
+  .card:hover {
+    transform: translateY(-5px);
+    background: #dd710d;
+  }
+  
+  /* Image styling inside card */
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Card content styling */
+  .card-content {
+    padding: 1em;
+  }
+  
+  /* Heading inside card */
+  .card-content h3 {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5em;
+  }
+  
+  /* Paragraph text inside card */
+  .card-content p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Add to Cart button styling */
+  .add-to-cart-btn {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--light-color);
+    padding: 0.75em 1.5em;
+    margin-top: 0.5em;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on Add to Cart button */
+  .add-to-cart-btn:hover {
+    background-color: #d99e00;
+  }
+  
+  /* Hide hamburger icon on larger screens */
+  @media (min-width: 769px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+  

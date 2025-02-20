@@ -1,0 +1,316 @@
+/* Root Variables */
+:root {
+    --primary-bg: #1a1a2e;
+    --secondary-bg: #2e2e4f;
+    --text-light: #ffffff;
+    --text-muted: #e0e0e0;
+    --accent-color: #ffcc00;
+    --border-radius: 12px;
+    --font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-bg);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .nevbar.app-name{
+    align-items: center;
+  }
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1rem 5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-right: 1rem;
+    
+  }
+  
+  .navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+    margin-right: 5rem;
+    border-radius:50px 50px 0 0 ;
+  }
+  
+  /* Toggle Options */
+  .dine-toggle {
+    display: flex;
+    gap: 5px;
+    padding: 1px;
+    margin-left: 0.1rem;
+    margin-right: 0.1px;
+  }
+  
+  .toggle-option {
+    background-color: var(--secondary-bg);
+    padding: 0.6em 0.5em;
+    height: 30px;
+    border-radius: var(--border-radius);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 10px;
+  }
+  
+  .toggle-option:hover,
+  .toggle-option.active {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    font-weight: bold;
+  }
+  
+  /* Second Navbar */
+  .navbar-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color:#060824;
+  }
+  
+  
+  
+  
+  .navbar-second{
+    margin-left: 0rem;;
+  }
+  
+  /* Hamburger Menu Button */
+  .hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    top: 65px;
+    right: 300px;
+    left: auto;
+    z-index: 1000;
+  }
+  
+  /* Hamburger Bars */
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    position: relative;
+    right: 30px;
+    left:auto;
+    background-color: #fff;
+    margin: 0.5rem 2rem;
+    transition: 0.4s;
+    
+  }
+  
+  /* Full-screen menu (initially hidden) */
+  #myLinks {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Dark transparent background */
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999;
+    
+  }
+  
+  /* Show the menu when active */
+  .hamburger-menu.active #myLinks {
+    display: flex;
+  }
+  
+  /* Menu Links */
+  #myLinks a {
+    color: #FFD700; /* Gold Text */
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 30px;
+    display: flex;
+    transition: 0.3s;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 20rem;
+    
+  }
+  
+  #myLinks a:hover {
+    color: #eedfdf;
+  }
+  
+  /* Change Hamburger to "X" when active */
+  .hamburger-menu.active .bar1 {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  
+  .hamburger-menu.active .bar2 {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active .bar3 {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color:#ffcc00;
+    border-radius: 50px;
+    padding: 0rem 0.1rem;
+    margin-left: 4rem;
+    
+  }
+  
+  .search-container input {
+    border: none;
+    background: none;
+    color:rgb(13, 16, 16);
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5em;
+  }
+  
+  .search-container input::placeholder {
+    color: black;
+  }
+  
+  .search-container .fa-search {
+    color:#0b0a0a;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+  
+  /* Cart Icon */
+  .cart {
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-right: -10px;
+    margin-left: 10px;
+  }
+  
+  /* Advertisement Banner */
+  .advertisement {
+    position: sticky;
+    top: 110px;
+    bottom: -100rem;
+    width: 100%;
+    background:#ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1616d2;
+    z-index: 1000;
+    margin-top: 130px;
+    
+  }
+  
+  .advertisement-content {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+  }
+  
+  /* Food Card */
+  .card {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Full-width */
+    max-width: 95%;; /* Set a max width for better readability */
+    height: 150px; /* Adjust height as needed */
+    background: #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+  }
+  
+  .card img {
+    width: 35%; /* Image takes 40% of card width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure proper scaling */
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .card-content {
+    width: 60%; /* Text section takes 60% of card width */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    color: #000;
+    font-weight: bolder;
+    margin-top: 10px;
+    
+    
+  }
+  
+  .card-description {
+    font-size: 10px;
+    color: #181717;
+    line-height: 1.3;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 5px;
+    color: rgb(20, 19, 19);
+    background-color: #e44712;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
+    float: inline-end;
+    border-radius: 50px;
+    margin-right: -10px;
+  }
+  
+  .card button:hover {
+    opacity: 1.9;
+  }
+
